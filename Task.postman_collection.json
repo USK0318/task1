@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "c2a07e9b-8a05-4542-873e-6028476fa321",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34566587"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "saikiran123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Sai@12345",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sai@gmail",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/teacher/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"teacher",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "sai@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Sai@12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/teacher/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"teacher",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/student",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "one student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/student/675be66411d68a4814bc460a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student",
+						"675be66411d68a4814bc460a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "sai",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "classs",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "section",
+							"value": "B",
+							"type": "text"
+						},
+						{
+							"key": "rollNumber",
+							"value": "B20",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/C:/Users/uppal/Downloads/Sai kiran.docx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/student",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzViZGIwZDM2ZTNlOWYwYjFlOTZiNzgiLCJpYXQiOjE3MzQwNzMyNTcsImV4cCI6MTczNTg3MzI1N30.r0i6Hfj54ETtMeZWBMYgLKhPXUqxIV5cEiS1VMaoCfM"
+					},
+					{
+						"key": "Cookie",
+						"value": "connect.sid=s%3ACJscCPrfg3Vgf8x2bN59jnLYjwUy3M9o.QkJTZU06wf3pDkXTZ%2FRL%2FdyNRequLBuuYcjiU1l23bU"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "sai",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "classs",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "section",
+							"value": "B",
+							"type": "text"
+						},
+						{
+							"key": "rollNumber",
+							"value": "B20",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1efb9143-3dc8-4830-b6a6-c1a7856ccd0e"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/student/675be66411d68a4814bc460a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"student",
+						"675be66411d68a4814bc460a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/student/675be5215e54fd2211c937dd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student",
+						"675be5215e54fd2211c937dd"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzViZGIwZDM2ZTNlOWYwYjFlOTZiNzgiLCJpYXQiOjE3MzQwNzczMjUsImV4cCI6MTczNTg3NzMyNX0.JpCfHnMwmIlNkOOKnMtdJ8GPvpX9qiFzWHPFDbwsPbc",
+			"type": "string"
+		}
+	]
+}
